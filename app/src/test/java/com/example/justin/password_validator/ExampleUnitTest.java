@@ -16,8 +16,31 @@ public class ExampleUnitTest {
     }
     @Test
     public void passwordTest() throws Exception {
-        assertTrue(MainActivity.passwordStrength("abcdefgh"));
+        assertTrue(MainActivity.passwordStrength("Abcdefgh2%"));
         assertFalse(MainActivity.passwordStrength("password"));
         assertFalse(MainActivity.passwordStrength("abcdefg"));
+        assertFalse(MainActivity.passwordStrength("Abcdefgh2"));
+        assertTrue(MainActivity.passwordStrength("CCCcc234876^&*"));
+        assertFalse(MainActivity.passwordStrength("239834ASJHDKJHASKD&^*&^"));
+    }
+    @Test
+    public void lowerCaseTest()throws Exception {
+        assertFalse(MainActivity.isLowerCase('A'));
+        assertTrue(MainActivity.isLowerCase('a'));
+    }
+    @Test
+    public void upperCaseTest() throws Exception {
+        assertTrue(MainActivity.isUpperCase('Z'));
+        assertFalse(MainActivity.isUpperCase('z'));
+    }
+    @Test
+    public void numberTest() throws Exception {
+        assertTrue(MainActivity.isNumber('5'));
+        assertFalse(MainActivity.isNumber('~'));
+    }
+    @Test
+    public void symbolTest() throws Exception {
+        assertTrue(MainActivity.isSpecialCharacter('%'));
+        assertFalse(MainActivity.isSpecialCharacter('j'));
     }
 }
