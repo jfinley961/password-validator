@@ -10,4 +10,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public boolean passwordStrength(String password){
+        if(password.equals("password"))
+            return false;
+        else if(password.length()<8)
+            return false;
+        return true;
+    }
 }
