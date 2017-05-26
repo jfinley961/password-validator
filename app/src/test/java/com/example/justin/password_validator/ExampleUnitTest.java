@@ -14,4 +14,10 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+    @Test
+    public void passwordTest() throws Exception {
+        assertTrue(MainActivity.passwordStrength("abcdefgh"));
+        assertFalse(MainActivity.passwordStrength("password"));
+        assertFalse(MainActivity.passwordStrength("abcdefg"));
+    }
 }
