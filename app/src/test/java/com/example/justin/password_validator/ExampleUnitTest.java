@@ -22,6 +22,7 @@ public class ExampleUnitTest {
         assertFalse(MainActivity.passwordStrength("Abcdefgh2"));
         assertTrue(MainActivity.passwordStrength("CCCcc234876^&*"));
         assertFalse(MainActivity.passwordStrength("239834ASJHDKJHASKD&^*&^"));
+        assertTrue(MainActivity.passwordStrength("A^&7634hjksdf98234kksdfHKJSF"));
     }
     @Test
     public void lowerCaseTest()throws Exception {
