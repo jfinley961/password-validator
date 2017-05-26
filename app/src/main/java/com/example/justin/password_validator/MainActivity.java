@@ -29,33 +29,25 @@ public class MainActivity extends AppCompatActivity {
             if(isSpecialCharacter(password.charAt(i)))
                 containsSpecialCharacter = true;
         }
-        if(containsLowerCase && containsUpperCase && containsNumber && containsSpecialCharacter)
-            return true;
-        return false;
+        return containsLowerCase && containsUpperCase && containsNumber && containsSpecialCharacter;
     }
     public static boolean isLowerCase(char c){
-        if((int) c >=(int) 'a' && (int) c <=(int) 'z')
-            return true;
-        return false;
+        return (int) c >= (int) 'a' && (int) c <= (int) 'z';
     }
     public static boolean isUpperCase(char c){
-        if((int) c >=(int) 'A' && (int) c <=(int) 'Z')
-            return true;
-        return false;
+        return (int) c >= (int) 'A' && (int) c <= (int) 'Z';
     }
     public static boolean isNumber(char c){
-        if((int) c >=(int) '0' && (int) c <=(int) '9')
-            return true;
-        return false;
+        return (int) c >= (int) '0' && (int) c <= (int) '9';
     }
     public static boolean isSpecialCharacter(char c){
         if((int) c >=33 && (int) c <=47)
             return true;
-        if((int) c >=58 && (int) c <=64)
+        else if((int) c >=58 && (int) c <=64)
             return true;
-        if((int) c >=91 && (int) c <=96)
+        else if((int) c >=91 && (int) c <=96)
             return true;
-        if((int) c >=123 && (int) c <=126)
+        else if((int) c >=123 && (int) c <=126)
             return true;
         return false;
     }
