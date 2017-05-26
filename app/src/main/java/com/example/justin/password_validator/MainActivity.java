@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public void clearEditText(View view){
+        EditText edit = (EditText)findViewById(R.id.editText);
+        edit.setText("");
+    }
     public void testPassword(View view){
         EditText edit = (EditText)findViewById(R.id.editText);
         TextView text = (TextView)findViewById(R.id.textView);

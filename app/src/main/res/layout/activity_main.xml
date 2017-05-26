@@ -26,6 +26,8 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:onClick="clearEditText"
+        android:singleLine="false"
         android:text="Enter Password"
         android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="parent"
